@@ -138,7 +138,7 @@ def main():
     casts_data = []
     cast_id_counter = 1
 
-    full_df = full_df[:7]
+    #full_df = full_df[:7]
     with ThreadPoolExecutor(max_workers=5) as executor:
         futures = {executor.submit(process_movie, row, cast_id_counter + idx * 100): idx for idx, row in full_df.iterrows()}
 
