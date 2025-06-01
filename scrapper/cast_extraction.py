@@ -11,7 +11,7 @@ def get_imdb_cast_and_characters(movie_id):
     soup = BeautifulSoup(response.text, 'html.parser')
     cast_section = soup.find('div', {'data-testid': 'sub-section-cast'})
     if not cast_section:
-        print("Cast section not found")
+        #print("Cast section not found")
         return []
     cast_list = []
     cast_items = cast_section.find_all('li', {'data-testid': 'name-credits-list-item'})
