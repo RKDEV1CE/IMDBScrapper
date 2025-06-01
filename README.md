@@ -94,18 +94,18 @@ This module scrapes movie data (movie ID and release year) based on keywords and
 - Edit the `.env` file in the root directory with your desired keywords for scraping.
 
 Run the scraper:
+cd scrapper
+python master_scrapper.py
 
-python scrapper/master_scrapper.py
-
-Scraped data will be saved in the `scrapper/masterdata/` directory, categorized by keyword.
+Scraped data will be saved in the `scrapper/masterdata/` directory, categorized by keyword and save files in format <keyword>_results.csv.
 
 ### Enrich Module
 
-This module processes the master data and transforms it into enriched JSON files saved in the `database/` folder.
+This module processes the master data and transforms it into enriched JSON files saved in the `database/` folder and save file <casts.json> & <movies.json>.
 
 To run:
-
-python scrapper/enrich_scrapper.py
+cd scrapper
+python enrich_scrapper.py
 
 ### Backend Module
 
@@ -137,6 +137,10 @@ Now you can use Postman to hit the available API endpoints and interact with the
 
 ---
 
+**Large Dataset path:**
+i) movies&cast: database\largedataset
+ii) master data: scrapper\masterdata\large_dataset
+ 
 ## Future Scope
 
 ### Serverless Execution
