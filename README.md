@@ -22,6 +22,7 @@ Docker
 Django Rest Framework
 
 Modules:
+
 1)Master Data Scraper
 🔹 Scrapes the initial list of movies based on a keyword (e.g., Action).
 🔹 Stores the movie ID and release year.
