@@ -118,7 +118,7 @@ def main():
     all_dfs = []
 
     for genre in genre_list:
-        file_path = f"masterdata/{genre}_results.csv"
+        file_path = f"masterdata/{genre}_results_large.csv"
         if os.path.exists(file_path):
             df = pd.read_csv(file_path)
             all_dfs.append(df)
