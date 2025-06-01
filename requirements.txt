@@ -7,4 +7,3 @@ fake-useragent
 dotenv
 django
 djangorestframework
-coverage
