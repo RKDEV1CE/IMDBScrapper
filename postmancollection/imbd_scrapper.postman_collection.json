@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "6a83eb6a-41ff-41dc-b5bb-677137564e5f",
+		"name": "imbd_scrapper",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32068096",
+		"_collection_link": "https://bold-moon-656423.postman.co/workspace/PetSelfPe~664c056e-959d-477d-8af3-b41685825da1/collection/32068096-6a83eb6a-41ff-41dc-b5bb-677137564e5f?action=share&source=collection_link&creator=32068096"
+	},
+	"item": [
+		{
+			"name": "filter_movies",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/movies/filter/?min_rating=5&release_year=2025",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"movies",
+						"filter",
+						""
+					],
+					"query": [
+						{
+							"key": "min_rating",
+							"value": "5"
+						},
+						{
+							"key": "release_year",
+							"value": "2025"
+						},
+						{
+							"key": "director",
+							"value": "Seth Gordon",
+							"disabled": true
+						},
+						{
+							"key": "movie_name",
+							"value": "Back in Action",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_cast_by_movie",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/movies/casts/?movie_id=tt0078732",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"movies",
+						"casts",
+						""
+					],
+					"query": [
+						{
+							"key": "movie_id",
+							"value": "tt0078732"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
