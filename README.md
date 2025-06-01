@@ -134,8 +134,15 @@ This module serves the enriched data through API endpoints.
 
 `python manage.py load_data`
 
+![image](https://github.com/user-attachments/assets/a406abf2-8683-483d-83d9-8b1c1a0bee03)
 
-Now you can use Postman to hit the available API endpoints and interact with the data.
+
+
+
+**Now you can use Postman to hit the available API endpoints and interact with the data.**
+![image](https://github.com/user-attachments/assets/d2e9a876-4a7c-4b8a-b102-c8a9670c9a0a)
+
+![image](https://github.com/user-attachments/assets/310b955d-613c-4002-9168-f551fd358899)
 
 ---
 
