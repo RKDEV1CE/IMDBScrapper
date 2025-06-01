@@ -21,7 +21,8 @@ class Command(BaseCommand):
                     release_year=m["release_year"],
                     director=m["director"],
                     summary=m["summary"],
-                    rating=m["rating"]
+                    rating = 0.0 if m["rating"] == "N/A" else float(m["rating"])
+
                 )
 
         # Load casts

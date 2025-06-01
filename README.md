@@ -65,27 +65,32 @@ We aim to scrape movie information from IMDb based on genre keywords such as Act
 
 ### 1. Clone the Repository
 
-git clone https://github.com/RKDEV1CE/IMDBScrapper.git  
-cd IMDBScrapper
+`git clone https://github.com/RKDEV1CE/IMDBScrapper.git`
+
+`cd IMDBScrapper`
 
 ### 2. Set Up Virtual Environment
 
-python -m venv venv
+`python -m venv venv`
 
 Activate the virtual environment:
 
 - On Windows (CMD):  
   venv\Scripts\activate
 
+- On MacOs
+  source venv/bin/activate
+
+
 ### 3. Install Dependencies
 
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 ---
 
-## Module Breakdown
+## 4. Module Breakdown
 
-### Master Module
+### 4.1 Master Module
 
 This module scrapes movie data (movie ID and release year) based on keywords and stores the output as master data.
 
@@ -94,56 +99,55 @@ This module scrapes movie data (movie ID and release year) based on keywords and
 - Edit the `.env` file in the root directory with your desired keywords for scraping.
 
 Run the scraper:
-cd scrapper
-python master_scrapper.py
+
+`cd scrapper`
+
+`python master_scrapper.py`
 
 Scraped data will be saved in the `scrapper/masterdata/` directory, categorized by keyword and save files in format <keyword>_results.csv.
 
-### Enrich Module
+### 4.2 Enrich Module
 
 This module processes the master data and transforms it into enriched JSON files saved in the `database/` folder and save file <casts.json> & <movies.json>.
 
 To run:
-cd scrapper
-python enrich_scrapper.py
 
-### Backend Module
+`cd scrapper`
+
+`python enrich_scrapper.py`
+
+### 4.3 Backend Module
 
 This module serves the enriched data through API endpoints.
 
 **Steps:**
 
 - Import the Postman collection from the `postmancollection/` folder into Postman.
-- Start the backend using Docker:
+  
+- Start the backend using Docker (Run the following command on the root directory):
 
-docker-compose up --build
+`docker-compose up --build`
 
 - Inside the Docker container, run:
 
-python manage.py migrate  
-python manage.py load_data
+`python manage.py migrate`  
 
-**Verify the data is loaded:**
+`python manage.py load_data`
 
-python manage.py shell
-
-Then, in the shell:
-
-from movies.models import Movie, Cast  
-Movie.objects.count()  
-Cast.objects.count()
 
 Now you can use Postman to hit the available API endpoints and interact with the data.
 
 ---
 
-**Large Dataset path:**
+**5. Large Dataset path:**
+
 i) movies&cast: database\largedataset
+
 ii) master data: scrapper\masterdata\large_dataset
  
-## Future Scope
+**6. Future Scope:**
 
-### Serverless Execution
+### 6.1 Serverless Execution
 Migrate the master and enrich scrapers to a serverless architecture (e.g., GCP Cloud Run Jobs) to handle concurrent processing of multiple keyword files.
-### Search Enhancements
+### 6.2 Search Enhancements
 Add advanced search functionality to the API using fuzzy matching and Elasticsearch for better keyword-based movie retrieval.
