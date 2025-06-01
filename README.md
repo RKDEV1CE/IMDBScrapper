@@ -60,6 +60,10 @@ We aim to scrape movie information from IMDb based on genre keywords such as Act
   - GET /api/casts/?movie_id=ttXXXX — Get cast by movie ID
 
 ---
+## Project Demo
+
+Demo link: https://www.loom.com/share/3ae79bce64d64532be21538d09d7092a?sid=5aa8cea2-2be0-4d3c-96a5-898db9c6fadd
+
 
 ## Setup Instructions
 
