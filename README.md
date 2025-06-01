@@ -40,7 +40,6 @@ Cast list
 3️)Backend Development
 🔹 REST APIs are built to serve the data using Django Rest Framework.
 🔹 Current endpoints include:
-GET /api/movies/ — List of movies
 GET /api/movies/?release_year=YYYY — Filter by year
 GET /api/casts/?movie_id=ttXXXX — Get cast by movie ID
 

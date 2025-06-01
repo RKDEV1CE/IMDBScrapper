@@ -40,7 +40,6 @@ def get_imdb_cast_and_characters(movie_id):
 # Example usage
 def get_cast(movie_id):
     #movie_id = "tt21191806"
-    #print("movie id here " , movie_id)
     cast_data = get_imdb_cast_and_characters(movie_id)
     cast_list = []
     for person in cast_data:
